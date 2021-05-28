@@ -1,0 +1,19 @@
+<% layout('boilerplate') %>
+<div class="container mt-5">
+    <% if(!currentUser)  { %>
+        <div class="jumbotron">
+            <h1 class="display-4">You must be logged in!</h1>
+            <br>
+            <a href="/login" class="btn btn-secondary btn-lg">Login</a>
+        </div>
+    <% } else { %>
+    <div class="jumbotron text-center">
+        <h1 class="display-5">Live Stream</h1>
+    <br>
+    <div class="container text-center" id="video-container">
+        <iframe width="320" height="315" src="http://proxy61.rt3.io:33415/" frameborder="0"></iframe>
+      </iframe>
+    </div>
+    </div>
+    <% } %>
+</div>

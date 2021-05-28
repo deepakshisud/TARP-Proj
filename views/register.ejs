@@ -1,0 +1,29 @@
+<% layout('boilerplate') %> 
+<div class="container py-3" style="width: 30%; margin-top: 10%; background-color: lightgray; border-radius: 3%;">
+    <h1 class="display-5">REGISTER</h1>
+    <br>
+    <form action="/register" class="validated-form" method="POST" novalidate>
+        <div class="mb-3">
+            <label class="form-lable" for="username">Username</label>
+            <input class = "form-control" type="text" name="username" id="username" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-lable" for="email">Email ID</label>
+            <input class = "form-control" type="email" name="email" id="email" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-lable" for="password">Password</label>
+            <input class = "form-control" type="password" name="password" id="password" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <button class="btn btn-secondary">Register</button>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<% layout('boilerplate') %>
+<div class="container mt-5">
+    <% if(!currentUser)  { %>
+        <div class="jumbotron">
+            <h1 class="display-4">You must be logged in!</h1>
+            <br>
+            <a href="/login" class="btn btn-secondary btn-lg">Login</a>
+        </div>
+    <% } else { %>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Current Bot Position</h1>
+        <br>
+        <p id="Logs" class="h4"></p>
+    </div>
+    <% } %>
+</div>
+<script>
+    function generateNo() {
+        var ran1 = Math.floor((Math.random() * 10000) + 1);
+        var ran2 = Math.floor((Math.random() * 10000) + 1);
+        document.getElementById("Logs").innerHTML = `The bot is at the location LAT 40.${ran1} and LON -73.${ran2}`;
+    }
+    setInterval(generateNo, 3000);
+
+    
+</script>
